@@ -1,0 +1,53 @@
+<div class="d-flex flex-column my-5 py-3">
+  <h2 class="fw-bold text-center">All Products</h2>
+  <p class="text-center">
+    The products we provide only for you as our service are selected from the<br class="d-none d-sm-block" />
+    best products with number 1 quality in the world
+  </p>
+
+  <ul class="all-products mt-5">
+    <li *ngFor="let product of products">
+      <div class="wrapper-img">
+        <img class="img-fluid" [src]="product.image" [alt]="product.name" />
+      </div>
+
+      <h4 class="fw-bold mt-3">{{ product.name }}</h4>
+
+      <span>
+        {{ product.offer | currency }}
+        <small class="ms-2 text-decoration-line-through text-muted">
+          {{ product.price | currency }}
+        </small>
+      </span>
+    </li>
+  </ul>
+
+  <ul class="paginator mt-5">
+    <li>
+      <button
+        class="btn btn-circle shadow-sm me-3"
+        (click)="paginatorEvent(currPage - 1)"
+        [disabled]="!havePrevPage(currPage - 1)"
+      >
+        <img src="assets/icons/arrow-left.png" alt="Arrow left" />
+      </button>
+    </li>
+
+    <li
+      *ngFor="let page of PAGES_ARRAY; let i = index"
+      class="page"
+      [class.active]="(i + 1) === currPage"
+      (click)="paginatorEvent(page + 1)"
+    ></li>
+
+    <li>
+      <button
+        class="btn btn-circle shadow-sm ms-3"
+        (click)="paginatorEvent(currPage + 1)"
+        [disabled]="!haveNextPage(currPage + 1)"
+      >
+        <img src="assets/icons/arrow-right.png" alt="Arrow right" />
+      </button>
+    </li>
+  </ul>
+</div>

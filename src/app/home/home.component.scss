@@ -1,0 +1,55 @@
+@import "/src/scss/";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: calc(100vh - 93px);
+}
+
+.numbers {
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 1;
+  flex-wrap: wrap;
+
+  li {
+    padding: 0.5rem 0px;
+  }
+
+  li + li {
+    border-left: 1px solid white;
+  }
+
+  h2,
+  p {
+    margin: 0px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  @include for-mobile-only {
+    li + li {
+      border-left: none;
+    }
+
+    li:nth-child(2),
+    li:nth-child(4) {
+      border-left: 1px solid white !important;
+    }
+  }
+}
+
+@include for-mobile-only {
+  .display-4 {
+    font-size: calc(1rem + 2.7vw);
+  }
+}

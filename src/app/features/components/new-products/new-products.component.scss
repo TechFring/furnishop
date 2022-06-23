@@ -1,0 +1,52 @@
+@import "/src/scss/";
+
+.new-products {
+  overflow-x: hidden;
+  display: flex;
+  gap: 20px;
+
+  li {
+    position: relative;
+
+    img {
+      height: 400px;
+      width: 265px;
+      object-fit: cover;
+      object-position: 0px;
+      border-radius: 5px;
+    }
+
+    span {
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 16px;
+      font-size: 1.2rem;
+      color: white;
+    }
+  }
+
+  @include for-mobile-only {
+    overflow-x: auto;
+  }
+}
+
+.btn-circle {
+  background: rgba(white, 0.5);
+  align-self: center;
+  z-index: 100;
+  box-shadow: none;
+
+  &.prev {
+    margin-right: -45px;
+  }
+
+  &.next {
+    margin-left: -45px;
+  }
+
+  @include for-mobile-only {
+    display: none;
+  }
+}

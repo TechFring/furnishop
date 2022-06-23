@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./scss/index";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Saira", sans-serif;
+}
+
+img,
+a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.btn {
+  font-weight: 600;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &-circle {
+    box-shadow: none;
+    background: white;
+    border-radius: 100%;
+    padding: 0.375rem;
+  }
+
+  &-lg {
+    padding: 0.8rem 1rem;
+  }
+
+  &-info {
+    color: white;
+    backdrop-filter: blur(15px);
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: currentColor;
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ng-touched.ng-invalid {
+  @extend .is-invalid;
+}

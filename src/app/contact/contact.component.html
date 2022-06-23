@@ -1,0 +1,19 @@
+<section class="contact text-white">
+  <div class="container h-100 d-flex flex-column justify-content-center align-items-end">
+    <div class="col-12 col-sm-5">
+      <h2>Get More Discount<br />Off Your Order</h2>
+      <p class="mt-3">Join our mailing list</p>
+
+      <div class="d-flex mt-4">
+        <input
+          class="form-control"
+          placeholder="Your email address"
+          [formControl]="emailControl"
+        />
+        <button class="btn btn-lg btn-dark ms-3" (click)="onSubmit()">
+          Shop Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

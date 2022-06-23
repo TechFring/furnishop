@@ -1,0 +1,59 @@
+<header>
+  <nav class="navbar navbar-dark" [class.min]="applyMin">
+    <div class="container">
+      <a class="navbar-brand" routerLink="">
+        <img class="img-fluid" src="assets/images/logo.png" alt="Logo" />
+      </a>
+
+      <button class="btn btn-menu" (click)="toggleOpenMenu()">
+        <img src="assets/icons/bars.png" alt="Bars" />
+      </button>
+
+      <ul class="navbar-nav" [class.open]="openMenu">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="fragment === 'home'"
+            routerLink="/"
+            fragment="home"
+          >
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="fragment === 'features'"
+            routerLink="/"
+            fragment="features"
+          >
+            Features
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="fragment === 'about'"
+            routerLink="/"
+            fragment="about"
+          >
+            About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="fragment === 'contact'"
+            routerLink="/"
+            fragment="contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

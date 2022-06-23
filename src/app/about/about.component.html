@@ -1,0 +1,46 @@
+<section class="container my-5 py-3">
+  <div class="d-flex flex-column flex-sm-row">
+    <div class="col-12 col-sm-6 d-flex flex-column">
+      <h2 class="fw-bold">What People Are Saying About Us</h2>
+
+      <ul class="depositions mt-3 mt-sm-0" #elDepositions>
+        <li *ngFor="let deposition of DEPOSITIONS" class="py-3 col-12">
+          <div class="d-flex align-items-center">
+            <img [src]="deposition.photo" [alt]="deposition.name" />
+            <div class="ms-3">
+              <h5 class="fw-bold mb-1">{{ deposition.name }}</h5>
+              <small class="text-muted">{{ deposition.occupation }}</small>
+            </div>
+          </div>
+
+          <p class="mt-3 lead">“{{ deposition.deposition }}”</p>
+        </li>
+      </ul>
+
+      <div class="d-flex justify-content-center justify-content-sm-start">
+        <button
+          class="btn btn-circle shadow-sm"
+          [appBtnControl]="elDepositions"
+          [prev]="true"
+        >
+          <img src="assets/icons/arrow-left.png" alt="Arrow left" />
+        </button>
+
+        <button
+          class="btn btn-circle shadow-sm ms-2"
+          [appBtnControl]="elDepositions"
+        >
+          <img src="assets/icons/arrow-right.png" alt="Arrow right" />
+        </button>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 ps-sm-4 d-none d-sm-inline-block">
+      <img
+        class="img-fluid"
+        src="assets/images/living-room.png"
+        alt="Living room"
+      />
+    </div>
+  </div>
+</section>

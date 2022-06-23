@@ -1,0 +1,81 @@
+@import "/src/scss/";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  padding: 1.5rem 0px;
+  transition: padding 0.2s ease-in;
+  z-index: 999;
+
+  &-brand {
+    z-index: 1000;
+  }
+
+  &-nav {
+    flex-direction: row;
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 2.5rem;
+  }
+
+  &.min {
+    padding: 0.5rem 0px;
+    background: rgba(black, 0.7);
+    backdrop-filter: blur(15px);
+
+    @include for-mobile-only {
+      background: rgba(black, 0.9);
+      backdrop-filter: none;
+    }
+  }
+
+  @include for-mobile-only {
+    &-nav {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(black, 0.8);
+      backdrop-filter: blur(15px);
+      padding: 2rem;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease-in;
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .nav-item {
+      font-size: 1.5rem;
+    }
+
+    .nav-item + .nav-item {
+      margin-left: 0px;
+    }
+  }
+}
+
+.btn-menu {
+  display: none;
+  z-index: 1000;
+
+  img {
+    width: 35px;
+  }
+
+  @include for-mobile-only {
+    display: inline-block;
+  }
+}
+

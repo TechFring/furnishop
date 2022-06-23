@@ -1,0 +1,36 @@
+<div class="d-flex flex-column flex-sm-row my-5 py-3">
+  <div class="d-flex flex-row flex-sm-column py-3 pe-5">
+    <h2 class="fw-bold col-5 col-sm-12">New In<br />Store Now</h2>
+    <p class="my-auto text-sm-small col-7 col-sm-12">
+      Get the latest items immediately with promo
+      <span class="d-none d-sm-inline">prices</span>
+    </p>
+    <span class="fw-bold col-sm-12 d-none d-sm-block">
+      <u class="me-1">Check All</u><img src="assets/icons/arrow-right.png" />
+    </span>
+  </div>
+
+  <button
+    class="btn btn-circle prev"
+    [appBtnControl]="elNewProducts"
+    [prev]="true"
+    [width]="285"
+  >
+    <img src="assets/icons/arrow-left.png" alt="Arrow left" />
+  </button>
+
+  <ul class="new-products mt-3 mt-sm-0" #elNewProducts>
+    <li *ngFor="let product of NEW_PRODUCTS">
+      <img [src]="product.image" [alt]="product.name" />
+      <span>{{ product.name }}</span>
+    </li>
+  </ul>
+
+  <button
+    class="btn btn-circle next"
+    [appBtnControl]="elNewProducts"
+    [width]="285"
+  >
+    <img src="assets/icons/arrow-right.png" alt="Arrow right" />
+  </button>
+</div>

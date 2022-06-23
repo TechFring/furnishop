@@ -1,0 +1,50 @@
+@import "/src/scss/";
+
+.all-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+
+  .wrapper-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+
+    .img-fluid {
+      border-radius: 10px;
+      max-height: 292px !important;
+    }
+  }
+
+  @include for-mobile-only {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+
+  .page {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+
+    &.active {
+      cursor: default;
+    }
+
+    &:hover,
+    &.active {
+      background: black;
+    }
+  }
+}

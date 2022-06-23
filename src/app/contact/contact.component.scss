@@ -1,0 +1,25 @@
+@import "/src/scss";
+
+.contact {
+  background: url("/assets/images/bg-contact.png") no-repeat;
+  background-size: cover;
+  height: 60vh;
+
+  .btn-dark {
+    white-space: nowrap;
+    font-size: 1.1rem;
+  }
+
+  @include for-mobile-only {
+    height: 40vh;
+    background-position: -75vw top;
+  }
+}
+
+@include for-mobile-only {
+  p,
+  h2 {
+    align-self: center;
+    text-align: center;
+  }
+}
