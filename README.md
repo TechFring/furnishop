@@ -1,27 +1,46 @@
-# FurnitureWebsite
+<h1 align="center">
+  FurniShop
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+<br />
 
-## Development server
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/54766216/175364139-457ea2bd-7405-4259-83df-04d6b9cf1acd.png">
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<br />
 
-## Code scaffolding
+## 🚀 Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- ✔️ Angular
+- ✔️ TypeScript
+- ✔️ SCSS
 
-## Build
+<br />
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💻 Demo
 
-## Running unit tests
+<a href="https://furnishop-psi.vercel.app/" target="_blank">https://furnishop-psi.vercel.app/</a>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<br />
 
-## Running end-to-end tests
+## ⚙️ Executando ambiente de desenvolvimento
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<strong>Clone o repositório e acesse o diretório via terminal para prosseguir</strong>
 
-## Further help
+<br/>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<span>Instalando dependências</span>
+
+```
+npm install
+```
+
+<br/>
+
+<span>Executando ambiente de dev</span>
+
+```
+npm start
+```
+
