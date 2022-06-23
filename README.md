@@ -15,6 +15,7 @@
 - ✔️ Angular
 - ✔️ TypeScript
 - ✔️ SCSS
+- ✔️ Bootstrap
 
 <br />
 
