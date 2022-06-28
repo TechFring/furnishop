@@ -39,7 +39,7 @@ npm install
 
 <br/>
 
-<span>Executando ambiente de dev</span>
+<span>Executando projeto</span>
 
 ```
 npm start
